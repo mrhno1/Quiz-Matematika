@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Matematika</title>
+</head>
+    <div id="timer">Time left: 30s</div>
+
+    <div class="quiz-container" id="menu">
+        <h1>Quiz Matematika</h1>
+        <button onclick="startQuiz('easy')">Easy</button>
+        <button onclick="startQuiz('medium')">Medium</button>
+        <button onclick="startQuiz('hard')">Hard</button>
+    </div>
+
+    <div class="quiz-container hidden" id="quiz">
+        <h1>Quiz Game</h1>
+        <div id="question">Question will appear here</div>
+        <div id="answers">
+            <button onclick="checkAnswer(0)">Answer 1</button>
+            <button onclick="checkAnswer(1)">Answer 2</button>
+            <button onclick="checkAnswer(2)">Answer 3</button>
+            <button onclick="checkAnswer(3)">Answer 4</button>
+        </div>
+        <div class="score" id="score">Score: 0</div>
+    </div>
+
+    <div class="quiz-container hidden" id="game-over">
+        <h1>Game Over</h1>
+        <p>You answered incorrectly. Please try again.</p>
+        <button onclick="goToMenu()">Back to Main Menu</button>
+    </div>
+
+    <div class="quiz-container hidden" id="game-complete">
+        <h1>Congratulations!</h1>
+        <p>You completed the quiz. Your final score is <span id="final-score"></span></p>
+        <button onclick="goToMenu()">Back to Main Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
